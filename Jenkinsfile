@@ -4,8 +4,8 @@ pipeline {
     environment {
         DOCKER_HUB_CREDENTIALS = credentials('docker-hub-credentials') // Store Docker Hub credentials in Jenkins
         DOCKER_IMAGE = 'foxe03/resume-builder'
-        GIT_USER_NAME = 'your-github-username'
-        GIT_REPO_NAME = '' // GitHub repo name
+        GIT_USER_NAME = 'Fox-R-FOX'
+        GIT_REPO_NAME = 'Resumebuilder' // GitHub repo name
     }
 
     stages {
