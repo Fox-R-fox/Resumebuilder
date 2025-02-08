@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: resume-builder
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: resume-builder
+  template:
+    metadata:
+      labels:
+        app: resume-builder
+    spec:
+      containers:
+      - name: resume-builder
+        image: foxe03/resume-builder:latest
+        ports:
+        - containerPort: 3000
+        env:
+        - name: NODE_ENV
+          value: production
